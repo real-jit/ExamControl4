@@ -44,6 +44,8 @@ namespace ExamContorol4_New
 
             UserAccess();
 
+            pictureBoxLogo.Image = Properties.Resources.logo;
+
             formLoaded = true;
 
             LoadProducts();

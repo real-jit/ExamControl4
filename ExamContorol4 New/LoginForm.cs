@@ -14,7 +14,7 @@ namespace ExamContorol4_New
 {
     public partial class LoginForm : Form
     {
-
+        
         string connectionString = "Host = localhost; Port = 5432; Username = postgres; Password = root; Database = control4";
 
         public LoginForm()
@@ -58,5 +58,11 @@ namespace ExamContorol4_New
             mainForm.Show();
             this.Hide();
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            pictureBoxAuth.Image = Properties.Resources.logo;
+        }
+
     }
 }

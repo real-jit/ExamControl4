@@ -52,9 +52,11 @@
             this.btnOrders = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.pictureBoxProduct = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             this.panelProduct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvProducts
@@ -321,11 +323,21 @@
             this.pictureBoxProduct.TabIndex = 0;
             this.pictureBoxProduct.TabStop = false;
             // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.Location = new System.Drawing.Point(12, 4);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(23, 20);
+            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLogo.TabIndex = 13;
+            this.pictureBoxLogo.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.pictureBoxLogo);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnOrders);
             this.Controls.Add(this.btnDelete);
@@ -346,6 +358,7 @@
             this.panelProduct.ResumeLayout(false);
             this.panelProduct.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -377,5 +390,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnOrders;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
     }
 }

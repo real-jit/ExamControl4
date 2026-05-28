@@ -35,6 +35,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnGuest = new System.Windows.Forms.Button();
+            this.pictureBoxAuth = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAuth)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -105,11 +107,21 @@
             this.btnGuest.UseVisualStyleBackColor = true;
             this.btnGuest.Click += new System.EventHandler(this.btnGuest_Click);
             // 
+            // pictureBoxAuth
+            // 
+            this.pictureBoxAuth.Location = new System.Drawing.Point(52, 43);
+            this.pictureBoxAuth.Name = "pictureBoxAuth";
+            this.pictureBoxAuth.Size = new System.Drawing.Size(123, 105);
+            this.pictureBoxAuth.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxAuth.TabIndex = 7;
+            this.pictureBoxAuth.TabStop = false;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBoxAuth);
             this.Controls.Add(this.btnGuest);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -119,6 +131,8 @@
             this.Controls.Add(this.btnLogin);
             this.Name = "LoginForm";
             this.Text = "Авторизация";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAuth)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,6 +147,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnGuest;
+        private System.Windows.Forms.PictureBox pictureBoxAuth;
     }
 }
 
