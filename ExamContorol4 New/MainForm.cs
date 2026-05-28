@@ -16,7 +16,7 @@ namespace ExamContorol4_New
     {
         string connectionString = "Host = localhost; Port = 5432; Username = postgres; Password = root; Database = control4";
 
-        int selectedProductId = 0;
+        int selectedProductId = 0; // вводим переменную фиксирующую id выбранного товара в строке
         bool formLoaded = false;
 
         int roleType = 0;
@@ -74,7 +74,7 @@ namespace ExamContorol4_New
             cmbSupplier.SelectedIndex = 0;
         }
 
-        private void UserAccess()
+        private void UserAccess() // Меняем функционал и интерфейс пользователей в зависимости от роли
         {
             bool AdminOrManager = roleType == 1 || roleType == 2;
 
@@ -184,7 +184,7 @@ namespace ExamContorol4_New
             }
         }
 
-        private void SetupGrid()
+        private void SetupGrid() // Меняем отображаемые поля в datagridview
         {
             foreach (DataGridViewColumn column in dgvProducts.Columns)
             {
@@ -524,9 +524,11 @@ namespace ExamContorol4_New
                 selectedProductId = 0;
                 LoadProducts();
             }
-            catch
-            {
 
+            catch (Exception ex)
+            {
+                MessageBox.Show("Произошел сбой" + ex.Message, "Удаление товара",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

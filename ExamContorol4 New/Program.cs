@@ -16,7 +16,7 @@ namespace ExamContorol4_New
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm(1, "1111"));
+            Application.Run(new LoginForm());
         }
     }
 }
